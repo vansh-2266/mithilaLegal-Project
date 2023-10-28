@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior:smooth ;
+}
+
+body{
+    min-height: 100%;
+    background: #fff;
+}
+
+/* banner css part  */
+
+.career-banner{
+    width: 100%;
+    height: 90vh;
+    background-image: url('/img/Get\ Started\ \(1\).png');
+    background-size: cover;
+    background-position: 5%;
+    margin-top: 80px;
+}
+
+.banner-text{
+    padding-top: 150px;
+    margin-left: 100px;
+}
+
+.banner-text h2{
+    /* letter-spacing: 0px; */
+    font-weight: bold;
+    color: #5271ff;
+    font-size: 70px;
+}
+
+.banner-text span{
+    margin-left: 10px;
+    font-size: 70px;
+    color: #ff974c;
+    font-style: italic
+    /* letter-spacing: 5px; */
+}
+
+#apply-Jobs-btn{
+    width: 230px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #5271ff;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#apply-Jobs-btn:hover{
+    background-color: #ff974c;
+    color: #fff;
+    transition: 0.4s;
+}
+
+
+/* Job posting css  */
+
+.job-list-container{
+    max-width: 85vw;
+    margin: 20px auto;
+}
+
+.job-list-container h2{
+    font-size: 40px;
+    border-left: 4px solid #5271ff;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.job-list-container .jobs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.job-list-container .jobs img{
+    width: 60px;
+}
+
+.job-list-container .job{
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-list-container .job:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease;
+}
+
+.job-list-container .open-positions{
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    color: #ff974c;
+}
+
+.job-list-container .job-title{
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    color: #5271ff;
+}
+
+.job-list-container .details{
+    margin-top: 6px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    /* flex: 1; */
+}
+
+.job-list-container .details-btn{
+    text-decoration: none;
+    /* border: 1px solid #5f26ff; */
+    background: #5271ff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.4s ease;
+}
+.job-list-container .details-btn:hover{
+    background: #ff974c;
+}
+
+
+/* faq  */
+
+.faq-section{
+    max-width: 85vw;
+    margin: 80px auto;
+}
+
+.faq-section h2{
+    font-size: 40px;
+    border-left: 4px solid #5f26ff;
+    padding-left: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.accordion .accordion-item {
+    border-bottom: 3px solid #e5e5e5;
+  }
+  
+  .accordion .accordion-item button[aria-expanded='true'] {
+    border-bottom: 5px solid #5271ff;
+  }
+  
+  .accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #000;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .accordion button:hover,
+  .accordion button:focus {
+    cursor: pointer;
+    color:#5271ff ;
+  }
+  
+  .accordion button:hover::after,
+  .accordion button:focus::after {
+    cursor: pointer;
+    color:#5271ff ;
+    border: 2px solid #5271ff ;
+  }
+  
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+  }
+  
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 22px;
+  }
+  
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+  
+  .accordion button[aria-expanded='true'] {
+    color: #5271ff ;
+  }
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
+  
+  
+  
+  
+
+
+
+/* responsive media query  */
+
+@media (max-width: 940px) {
+    .job-list-container .jobs{
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .job-list-container .jobs{
+        grid-template-columns: 1fr ;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

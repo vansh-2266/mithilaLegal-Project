@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior:smooth ;
+}
+
+nav{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+body{
+    min-height: 100%;
+    background: #fff;
+    font-family: sans-serif;
+     margin: 0;
+}
+
+.about-us{
+    padding: 180px 0px 30px 0;  
+}
+
+.about-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-us .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us .flex{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.about-us h2{
+    font-size: 45px;
+    border-left: 4px solid #5f26ff;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us h3{
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.about-us p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+.about-us img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-us .social-links{
+    margin-bottom: 20px;
+}
+
+.about-us .social-links a i{
+   font-size: 25px;
+}
+
+.about-us .social-links a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    background: #5271FF;
+    box-shadow: 0 2px 5px rgba(0, 0,0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.about-us .social-links a:hover{
+    transform: translateY(-3px);
+}
+
+.about-btn{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #5271FF;
+    box-shadow: 0 2px 5px rgba(0, 0,0, 0.3);
+    transition: all 0.4s ease;
+
+}
+
+.about-btn:hover{
+    transform: translateY(-3px);
+    
+}
+
+
+/* scroll down animation  */
+  
+.container_mouse {
+    text-align: center;
+    color: #888;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    cursor: pointer;
+  }
+  
+  .container_mouse .mouse-btn {
+    margin: 10px auto;
+    width: 30px;
+    height: 45px;
+    border: 4px solid #888;
+    border-radius: 30px;
+    display: flex;
+  }
+  
+  .container_mouse .mouse-btn .mouse-scroll {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #888;
+    border-radius: 50%;
+    margin: auto;
+    animation: scrolling 1s linear infinite;
+  }
+  
+
+  
+  @keyframes scrolling {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+
+
+
+
+/* our team  */
+#our-team-sec{
+    margin-bottom: 70px;
+}
+.our-team{
+    max-width: 85vw;
+    margin: 20px auto;
+}
+.our-team .our-team-title{
+    font-size: 45px;
+    border-left: 4px solid #5271ff;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.personCards{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.personCards p small{
+    color: #8f8f8f;
+}
+
+.personCards p{
+    /* font-size: 0.9em; */
+    line-height: 23px;
+}
+
+.personCards .text h1{
+    margin: 0;
+}
+.skewed{
+    width: 84vw;
+    color: #333;
+    display: flex;
+    background: #fff;
+    margin: 1.5em 0;
+    box-shadow: 0 0 15px rgba(0, 0,0, 0.3);
+}
+
+.personCards .text{
+    padding: 1.5em;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.personCards .text a{
+    text-decoration: none;
+    color: #555;
+}
+
+.img-about{
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-about img{
+    width: 100%;    
+}
+
+.img-about::before{
+    content: '';
+    position: absolute;
+    left: -6em;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    background: #fff;
+    width: 40%;
+    height: 140%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.skewed-left .img-about::before
+{
+    transform: translateY(-50%) rotate(-20deg);
+    left: initial;
+    right: -6em;
+}
+
+
+
+/* responsiveness */
+@media screen and (max-width: 1158px) {
+    .about-us h2{
+        font-size: 30px;
+    }
+    .about-us p{
+        font-size: 15px;
+    }
+
+    .about-us h3{
+        font-size: 20px;
+    }
+
+    .about-us .social-links a i{
+        font-size: 22px;
+    }
+
+    .about-us .social-links a{
+        width: 30px;
+        height: 30px;
+        line-height: 42px;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+}
+
+
+@media screen and (max-width: 788px){
+    .about-us{
+        padding: 140px 0px 20px 0;  
+    }
+    .row{
+        flex-direction: column;
+    }
+
+    .about-us .flex{
+        max-width: 100%;
+    }
+
+    .about-us h2{
+        font-size: 31px;
+    }
+    .about-us p{
+        font-size: 16px;
+    }
+
+    .about-us .social-links a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .about-us .social-links a{
+        line-height: 40px;
+    }
+
+    .about-us .social-links a i{
+        font-size: 22px;
+    }
+
+    .about-btn{
+        font-size: 16px;
+        padding: 8px 16px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .skewed {
+        display: block;
+        width: 80vw;
+    }
+
+    .img-about, 
+    .personCards .text{
+        width: 100%;
+    }
+
+    .img-about img{
+        width: 150%;
+    
+    }
+
+    .skewed .img-about::before{
+        width: 120%;
+        height: 0%;
+        top: -5em;
+        left: 50%;
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    .skewed-left .img-about::before
+    {
+    transform: translateY(-55%) rotate(0deg);
+    left: initial;
+    right: -5em;
+    }
+}
+
+@media screen and (max-width: 1085px)
+{
+    .img-about img{
+        width: 115%;
+    }
+}
