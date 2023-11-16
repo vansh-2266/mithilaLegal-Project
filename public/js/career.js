@@ -80,54 +80,86 @@ const jobs = [
 const jobHeading = document.querySelector(".job-list-container h2");
 const jobsContainer = document.querySelector(".job-list-container .jobs");
 
+let jobBox = document.getElementById("Alljobss");
+
 if(jobs.length == 0) {
     jobHeading.innerHTML = "No Position Available | 0 Job!"
 }
 
-const createJobListingCards = () => {
-    jobs.forEach(job => {
-        let jobCard = document.createElement("div");
-        jobCard.classList.add("job");
+// const createJobListingCards = () => {
+//     jobs.forEach(job => {
+//         let jobCard = document.createElement("div");
+//         jobCard.classList.add("job");
 
-        let image = document.createElement("img");
-        image.src = job.image;
+//         let image = document.createElement("img");
+//         image.src = job.image;
 
-        let title = document.createElement("h3");
-        title.classList.add("job-title");
-        title.innerHTML = job.title;
+//         let title = document.createElement("h3");
+//         title.classList.add("job-title");
+//         title.innerHTML = job.title;
 
-        let details = document.createElement("div");
-        details.classList.add("details");
-        details.innerHTML = job.details;
+//         let details = document.createElement("div");
+//         details.classList.add("details");
+//         details.innerHTML = job.details;
 
-        let detailsBtn = document.createElement("a");
-        detailsBtn.classList.add("details-btn");
-        detailsBtn.href = job.applyLink;
-        detailsBtn.innerHTML = "Apply Here";
+//         let detailsBtn = document.createElement("a");
+//         detailsBtn.classList.add("details-btn");
+//         detailsBtn.href = job.applyLink;
+//         detailsBtn.innerHTML = "Apply Here";
 
-        let openPositions = document.createElement("span");
-        openPositions.classList.add("open-positions");
+//         let openPositions = document.createElement("span");
+//         openPositions.classList.add("open-positions");
 
-        if(job.openPosition == 1){
-            openPositions.innerHTML = `${job.openPosition} open position`;
-        }
-        else{
-            openPositions.innerHTML = `${job.openPosition} open positions`;
-        }
+//         if(job.openPosition == 1){
+//             openPositions.innerHTML = `${job.openPosition} open position`;
+//         }
+//         else{
+//             openPositions.innerHTML = `${job.openPosition} open positions`;
+//         }
         
 
-        jobCard.appendChild(image);
-        jobCard.appendChild(title);
-        jobCard.appendChild(details);
-        jobCard.appendChild(detailsBtn);
-        jobCard.appendChild(openPositions);
+//         jobCard.appendChild(image);
+//         jobCard.appendChild(title);
+//         jobCard.appendChild(details);
+//         jobCard.appendChild(detailsBtn);
+//         jobCard.appendChild(openPositions);
         
-        jobsContainer.append(jobCard);
-    })
-}
+//         jobsContainer.append(jobCard);
+//     })
+// }
 
-createJobListingCards();
+// createJobListingCards();
 
+
+
+var db = firebase.database();
+var jobsRef = firebase.database().ref('jobsListing/');
+
+jobsRef.on('value', (snapshot) => {
+    const jobs = snapshot.val();
+    // console.log(users);
+
+    for(job in jobs)
+    {
+      // console.log(users[user].name);
+      // console.log(users[user].phone);
+      // console.log(users[user].email);
+  
+      let add = `
+      <div class="job">
+      <img src="${jobs[job].imgUrl}">
+      <h3 class="job-title">${jobs[job].title}</h3>
+      <div class="details">${jobs[job].textContentInp}</div>
+      <a href="${jobs[job].applyLinkInp}" class="details-btn">Apply Here</a>
+
+      <span class="open-positions">${jobs[job].positionInp} open positions</span>
+  </div>
+      `
+      jobBox.innerHTML += add;
+  
+    }
+});
+   
 
 
 

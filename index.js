@@ -20,6 +20,11 @@ app.get('/career', (req, res) => {
     res.sendFile(path.join(initial_path, "career.html"));
 })
 
+app.get('/careerDash', (req, res) => {
+    res.sendFile(path.join(initial_path, "careerDash.html"));
+})
+
+
 
 app.use((req, res) =>{
     res.json("404");

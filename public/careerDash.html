@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Dashboard</title>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="styles/careerDash.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!-- navbar Dashboard -->
+    <header>
+        <div class="header-container">
+          <span style="font-size: 1.3rem;"><Strong>Mithila Legal</Strong></span>
+          <nav id="nav">
+            <ul id="nav-ul">
+              <li><a href="/careerDash">CareerDash</a></li>
+              <li><a href="">Article-Blog Dash</a></li>
+              <li><a href="">Messages/Query Request</a></li>
+              <li><a href="/career">SignOut</a></li>
+            </ul>
+          </nav>
+          <span class="hamburger" id="button"><i class="fa-solid fa-bars"></i></span>
+        </div>
+    </header>
+
+
+    <!-- input fields  -->
+
+    <div class="job-input">
+        <h1>Add Jobs</h1>
+    </div>
+
+    <div class="inputCareer">
+
+        <label>Role/ Title:</label>
+        <input type="text" id="roleInp">
+        <br>
+
+        <label>Cover Image URL:</label>
+        <input type="text" id="imgUrlInp">
+        <br>
+
+        <label>Content / Text Body: </label>
+        <input type="text" id="textContentInp">
+        <br>
+
+        <label>No. of open positions:</label>
+        <input type="number" id="positionInp">
+        <br>
+
+        <label>Apply Link/ Google Form:</label>
+        <input type="text" id="applyLinkInp">
+        <br>
+
+    </div>
+
+    <div class="action-btn">
+        <button id="addBtn">Add Job Opening</button>
+    </div>
+
+
+   <!-- ***********Job opening added (All Display)******************** -->
+   <div class="all-opening">
+        <h1>Job Available</h1>
+   </div>
+
+   <div class="wrapper-jobs">
+        <table id="crud">
+            <thead>
+                <tr>
+                    <td>Job Role</td>
+                    <td>Image URL</td>
+                    <td>Content/Description</td>
+                    <td>Open Positions</td>
+                    <td>Apply Link</td>
+                    <td>Action Button</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>abdoelaziz</td>
+                    <td>http://image.png</td>
+                    <td>qwertyuiopasdfghjklkzxcvbnm.</td>
+                    <td>4</td>
+                    <td>www.google.com</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr> -->
+
+
+            </tbody>
+        </table>
+   </div>
+
+
+   <!-- footer basic for Dashboard -->
+   <footer>
+        <div class="text-foot">
+            <p>Copyrigth &copy;  Mithila Legal | Career Dashboard</p>
+        </div>
+   </footer>
+
+
+
+    <!-- firebase JS  -->
+    
+         <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        
+         <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+            <script>
+                // Your web app's Firebase configuration
+                const firebaseConfig = {
+                apiKey: "AIzaSyCTAXisqZZYiOJeUZF8yr-YOmSvl2Ly8tE",
+                authDomain: "fir-v10-e8719.firebaseapp.com",
+                databaseURL: "https://fir-v10-e8719-default-rtdb.firebaseio.com",
+                projectId: "fir-v10-e8719",
+                storageBucket: "fir-v10-e8719.appspot.com",
+                messagingSenderId: "275013597519",
+                appId: "1:275013597519:web:069b9c854d23c37188ad3a"
+                };
+            
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+            </script>
+
+    <script src="js/careerDash.js"></script>
+    
+</body>
+</html>
